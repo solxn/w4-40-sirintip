@@ -37,11 +37,11 @@ export default function Home() {
             <TextInput style={TheStyle.input} value={text} onChangeText={setText}/>
             {/* save */}
             <TouchableOpacity onPress={saveFruit}>
-                <Text>บันทึก</Text>
+                <Text style={TheStyle.button}>บันทึก</Text>
             </TouchableOpacity>
             {/* delete */}
             <TouchableOpacity onPress={removeFruit}>
-                <Text>ลบ</Text>
+                <Text style={TheStyle.button} >ลบ</Text>
             </TouchableOpacity>
 
         </View>
@@ -62,7 +62,12 @@ const TheStyle = StyleSheet.create({
     },
 
     button:{
-        
-    }
-
-})  
+        backgroundColor:"#FF7F50",
+        padding:10,
+        marginTop:10,
+        borderRadius:10,
+        width:100,
+        textAlign:"center",
+        marginBottom:10
+    },
+})
