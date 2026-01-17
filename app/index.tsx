@@ -32,7 +32,8 @@ export default function Home() {
     return (
         <View style={TheStyle.container}>
             {/* แสดงสิ่งที่บันทึก */}
-            <Text>Fruit : {fruit} </Text>
+            <Text style={TheStyle.font}>Fruit : </Text>
+            <Text style={TheStyle.ans}>{fruit}</Text>
             {/* รับข้อความ */}
             <TextInput style={TheStyle.input} value={text} onChangeText={setText}/>
             {/* save */}
@@ -53,21 +54,42 @@ const TheStyle = StyleSheet.create({
         flex: 1,
         justifyContent:"center",
         alignItems:"center",
+        backgroundColor:"#ececec"
     },
 
     input:{
-        borderWidth:1,
+        borderWidth:2,
         // width %  ใส่ฟันหนู
-        width:"80%"  
+        width:"80%",  
+        borderRadius:15,
+        marginBottom: 20
     },
 
     button:{
-        backgroundColor:"#FF7F50",
+        backgroundColor:"#142d4c",
         padding:10,
         marginTop:10,
         borderRadius:10,
         width:100,
         textAlign:"center",
-        marginBottom:10
+        marginBottom:10,
+        color:"white"
     },
+
+    ans:{
+        backgroundColor:"#385170",
+        padding: 20,
+        margin: 30,
+        width: 250,
+        color:"white",
+        textAlign:"center",
+        fontSize: 20,
+        fontFamily:"serif"
+    },
+
+    font:{
+        fontFamily:"serif",
+        fontWeight:700,
+        fontSize:25
+    }
 })
